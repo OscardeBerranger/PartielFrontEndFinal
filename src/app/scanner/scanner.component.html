@@ -1,0 +1,23 @@
+<app-navbar />
+<!-- For camera -->
+
+<ngx-scanner-qrcode #action="scanner"></ngx-scanner-qrcode>
+
+
+<!-- Loading -->
+<p *ngIf="action.isLoading">⌛ Loading...</p>
+
+<p *ngIf="action.isTorch" >RRRRAAAAAAAAAADIIIIIIIIIIII</p>
+
+
+<!-- start -->
+<div
+  class="buttonContainer"
+>
+  <button
+    class="btn btn-success"
+    (click)="action.isStart ? action.stop() : action.start()">{{action.isStart ? 'Stop' : 'Start'}}</button>
+  <button
+    class="btn btn-success"
+    (click)="addToCart(action.data.value[0])" >add to cart</button>
+</div>

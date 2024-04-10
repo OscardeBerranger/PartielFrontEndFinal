@@ -1,0 +1,31 @@
+<app-navbar />
+
+<form class="col-md-6" #paymentform="ngForm" (ngSubmit)="handleClick(paymentform)">
+  <div class="mb-3">
+    <label for="name" class="form-label">Name</label>
+    <input type="text" class="form-control" name="name" id="name" ngModel >
+  </div>
+  <div class="mb-3">
+    <label for="lastname" class="form-label">Last name</label>
+    <input type="text" class="form-control" name="lastname" id="lastname" ngModel >
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" name="email" id="email" ngModel >
+  </div>
+  <div class="mb-3">
+    <label for="cardNumber" class="form-label">Card number</label>
+    <input type="text" class="form-control" name="cardNumber" id="cardNumber" ngModel >
+  </div>
+  <div class="mb-3">
+    <label for="expireDate" class="form-label">Expire Date</label>
+    <input type="text" class="form-control" name="expireDate" id="expireDate" ngModel >
+  </div>
+  <div class="mb-3">
+    <label for="cvv" class="form-label">Cvv</label>
+    <input type="text" class="form-control" name="cvv" id="cvv" ngModel >
+  </div>
+  <div class="mb-3">
+    <button (click)="handlePaymentClick(paymentform)">Pay</button>
+  </div>
+</form>

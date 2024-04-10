@@ -1,0 +1,36 @@
+<nav class="navbar">
+  <div
+    class="mainNavContainer"
+    *ngIf="token">
+    <button
+      class="btn btn-success"
+      (click)="router.navigate(['/cart'])">
+      see cart
+    </button>
+    <button
+      class="btn btn-success"
+      (click)="router.navigate(['/scanner'])">
+      scan items
+    </button>
+
+    <button
+      class="btn btn-success"
+      *ngIf="token"
+      (click)="localStorage.setItem('token', '')">
+      logout
+    </button>
+    <div
+      *ngIf="!token">
+      <button
+        class="btn btn-success"
+        (click)="router.navigate(['/register'])" >Register</button>
+      <button
+        class="btn btn-success"
+        (click)="router.navigate(['/login'])" >Login</button>
+    </div>
+
+
+  </div>
+</nav>
+
+
